@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://fn4ue284pmgv"]
+
+[ext_resource type="Shader" path="res://motion_blur/moblur_shader.gdshader" id="1_k5wmj"]
+[ext_resource type="Script" path="res://motion_blur/motion_blur.gd" id="2_lkr00"]
+
+[sub_resource type="PlaneMesh" id="1"]
+size = Vector2(40, 20)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h45ax"]
+render_priority = -1
+shader = ExtResource("1_k5wmj")
+shader_parameter/angular_velocity = Vector3(0, 0, 0)
+shader_parameter/intensity = 0.28
+shader_parameter/iteration_count = 15
+shader_parameter/linear_velocity = Vector3(0, 0, 0)
+shader_parameter/startRadius = 0.5
+
+[node name="motion_blur" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -2)
+cast_shadow = 0
+mesh = SubResource("1")
+surface_material_override/0 = SubResource("ShaderMaterial_h45ax")
+script = ExtResource("2_lkr00")
