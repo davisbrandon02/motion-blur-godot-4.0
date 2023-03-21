@@ -9,10 +9,10 @@ size = Vector2(40, 20)
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h45ax"]
 render_priority = -1
 shader = ExtResource("1_k5wmj")
-shader_parameter/angular_velocity = Vector3(0, 0, 0)
-shader_parameter/intensity = 0.28
-shader_parameter/iteration_count = 15
 shader_parameter/linear_velocity = Vector3(0, 0, 0)
+shader_parameter/angular_velocity = Vector3(0, 0, 0)
+shader_parameter/iteration_count = 15
+shader_parameter/intensity = 0.28
 shader_parameter/startRadius = 0.5
 
 [node name="motion_blur" type="MeshInstance3D"]
